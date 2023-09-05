@@ -28,3 +28,5 @@ THEN I am able to successfully create, update, and delete data in my database
     * Tag belongs to many Product models.
 - The files product-routes.js, tag-routes.js, and category-routes.js are all unfinished. Fill out their CRUD operations using Sequelize models.
     * HINT: Check cloned code syntax for our model's column definitions to figure out what req.body will be for POST and PUT routes
+- Seed database with npm run seed to test routes
+- Sync sequelize models to MySQL database on server start through server.js
