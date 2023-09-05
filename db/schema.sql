@@ -39,7 +39,7 @@ CREATE TABLE producttag (
     FOREIGN KEY (tag_id)
     REFERENCES tag(id)
     ON DELETE SET NULL
-);
+);|
 
 ALTER TABLE product ALTER COLUMN stock SET DEFAULT 10;
 
