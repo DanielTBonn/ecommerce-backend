@@ -1,35 +1,8 @@
 {
-  "name": "module-13-challenge-orm",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@work.github.com:coding-boot-camp/module-13-challenge-orm.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  },
   "dependencies": {
-    "dotenv": "^8.6.0",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-<<<<<<< HEAD
-    "mysql2": "^2.1.0",
-    "sequelize": "^5.22.5"
-=======
-    "mysql": "^2.18.1",
-    "mysql2": "^2.3.3",
-    "sequelize": "^5.22.5",
-    "sqlite3": "^5.1.6"
->>>>>>> 1301823217f11c95bd986f361ba7d5d602747ddd
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
   }
 }
