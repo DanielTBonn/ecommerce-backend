@@ -1,3 +1,4 @@
+// Tag model for our tag table in sql
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');

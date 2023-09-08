@@ -1,3 +1,4 @@
+// Category model for our category sql table
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');

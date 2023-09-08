@@ -1,3 +1,4 @@
+// ProductTag model for our product_tag table in sql
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
