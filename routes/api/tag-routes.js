@@ -10,8 +10,14 @@ router.get('/', async (req, res) => {
       // be sure to include its associated Product data
       include: [{ model: Product}],
     });
-    console.log("Success!")
-    res.status(200).json(tagData)
+
+    if (!tagData) {
+      res.status(404).json({"message": "No tag data found."})
+    } else {
+      console.log("Success!");
+      res.status(200).json(tagData);
+    }
+
   } catch (err) {
     res.status(500).json(err);
     console.log("Error occured");
@@ -19,9 +25,26 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
+router.get('/:id', async (req, res) => {
+  try {
+    // find all tags
+    const tagData = await Tag.findByPk(req.params.id, {
+      // be sure to include its associated Product data
+      include: [{ model: Product}],
+    });
+
+    if (!tagData) {
+      res.status(404).json({"message": "No tag with this id."})
+    } else {
+      console.log("Success!");
+      res.status(200).json(tagData);
+    }
+    
+  } catch (err) {
+    res.status(500).json(err);
+    console.log("Error occured");
+    console.log(err)
+  }
 });
 
 router.post('/', (req, res) => {

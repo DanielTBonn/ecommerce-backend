@@ -10,20 +10,43 @@ router.get('/', async (req, res) => {
     const productData = await Product.findAll({
       // be sure to include its associated Category and Tag data
       include: [{ model: Category }, { model: Tag }]
-    })
-    console.log("Success!")
-    res.status(200).json(productData);
+    });
+
+    if (!productData) {
+      res.status(404).json({"message": "No products found." });
+    } else {
+      console.log("Success!")
+      res.status(200).json(productData);
+    }
+
   } catch (err) {
     res.status(500).json(err);
     console.log("Error occured");
-    console.log(err)
+    console.log(err);
   }
 });
 
 // get one product
-router.get('/:id', (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+router.get('/:id', async (req, res) => {
+  try {
+    // find all products
+    const productData = await Product.findByPk(req.params.id, {
+      // be sure to include its associated Category and Tag data
+      include: [{ model: Category }, { model: Tag }]
+    });
+
+    if (!productData) {
+      res.status(404).json({"message": "No products with this id." });
+    } else {
+      console.log("Success!")
+      res.status(200).json(productData);
+    }
+    
+  } catch (err) {
+    res.status(500).json(err);
+    console.log("Error occured");
+    console.log(err);
+  }
 });
 
 // create new product
