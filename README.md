@@ -19,7 +19,7 @@ From the command line, clone this repo into your directory and install dependenc
   
 Create different CRUD methods in your insomnia client and use them to test your website. Make sure any methods changing the database have their respective json attributes properly filled out.
 
-![insomnia-example](/assets/images)
+![insomnia-example](/assets/images/insomnia-example-img.png)
 
 ## Contribute
   
@@ -31,7 +31,7 @@ No tests have been written at this time.
 
 ## Links
 
-
+https://watch.screencastify.com/v/YSl5Z7d0lU4n7blKJNRk
 
 ## Questions
 
